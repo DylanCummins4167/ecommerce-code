@@ -8,11 +8,12 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Routes
-//app.use('/categories', require('./routes/categories'));
-//app.use('/products', require('./routes/products'));
-//app.use('/tags', require('./routes/tags'));
+app.use('/api/categories', require('./routes/categories'));
+app.use('/api/products', require('./routes/products'));
+app.use('/api/tags', require('./routes/tags'));
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server listening on port ${PORT}`);
+// });
+module.exports=app
